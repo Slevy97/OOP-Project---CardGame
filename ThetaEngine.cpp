@@ -16,10 +16,12 @@ ThetaEngine::~ThetaEngine() {
 }
 
 ThetaEngine ThetaEngine::T_Engine;
+Window& ThetaEngine::window(Window::getHandle());
 GameManager& ThetaEngine::G_Manager(GameManager::getHandle());
 EventManager& ThetaEngine::E_Manager(EventManager::getHandle());
 InputManager& ThetaEngine::I_Manager(InputManager::getHandle());
-Window& ThetaEngine::window(Window::getHandle());
+NetworkManager& ThetaEngine::N_Manager(NetworkManager::getHandle());
+
 
 bool Theta::isOnTheTable(sf::RectangleShape* moving_card, sf::RectangleShape* table) {
 

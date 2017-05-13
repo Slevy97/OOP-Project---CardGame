@@ -6,6 +6,8 @@
 
 #define STD_WIDTH 1024
 #define STD_HEIGHT 768
+#define FULL_WIDTH 1920
+#define FULL_HEIGHT 1080
 
 namespace Theta {
 
@@ -36,4 +38,5 @@ namespace Theta {
 }
 
 #endif // !WINDOW_H_INCLUDED
+
 

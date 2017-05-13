@@ -24,6 +24,13 @@ namespace Theta {
 		void detect_movement(); // function that handles that movement of the GameObject - CardSprite
 		void detach_movement(); // function that lets off the GameObject - CardSprite from the movement action
 		void mouse_outside();
+		void detect_attack();
+		void attack_cards(int);
+		void erase_cards();
+		void reset_attack();
+		void update_players();
+		void checkGameTableInteractions();
+		void checkGameTableClose();
 		sf::Event getEvent() {
 			return this->event;
 		}
@@ -31,3 +38,4 @@ namespace Theta {
 }
 
 #endif // !EVENT_MANAGER_H_INCLUDED
+

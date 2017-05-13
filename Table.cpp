@@ -7,9 +7,9 @@ extern GameObject* moving;
 
 Table::Table(float width, float height) :
 
-player_hand(width, 0.33f * height, 0.0f, 0.66f * height),
-player_table(width, 0.33f * height, 0.0f, 0.33f * height),
-enemy_table(width, 0.33f * height, 0.0f, 0.0f) {
+	player_hand(width, 0.33f * height, 0.0f, 0.66f * height),
+	player_table(width, 0.33f * height, 0.0f, 0.33f * height),
+	enemy_table(width, 0.33f * height, 0.0f, 0.0f) {
 
 	this->setSize(sf::Vector2f(width, height));
 	this->setRectTexture("background.png");
@@ -42,3 +42,5 @@ void Table::setRectTexture(const std::string& where_to_find) {
 		this->setTexture(&(this->table_texture));
 	}
 }
+
+Table::~Table() {}

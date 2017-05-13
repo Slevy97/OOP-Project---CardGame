@@ -2,6 +2,7 @@
 #define GAME_MANAGER_H_INCLUDED
 #include "GameObject.h"
 #include <list>
+#define NR_MAX_CARDS_DECK 29
 
 namespace Theta {
 
@@ -14,9 +15,9 @@ namespace Theta {
 		GameManager();
 		GameManager(const GameManager&) {}
 		void operator= (GameManager&) {}
-		
+
 	public:
-		~GameManager() {}
+		~GameManager();
 		static GameManager& getHandle() {
 			return G_Manager;
 		}
@@ -25,6 +26,10 @@ namespace Theta {
 		void erase_GameObject(GameObject*); // function that erases a GameObject from the list of GameObjects 
 		void erase_GameObjects(); // function that erases all the GameObjects from the game
 		void change_state(); // function that changes the state of the window (windowed, fullscreen)
+		bool drag_card();
+		bool check_win();
+		bool check_lose();
+		void InitializeGame();
 	};
 }
 
